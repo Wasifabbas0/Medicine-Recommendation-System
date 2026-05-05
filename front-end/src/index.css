@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* HealthMate Medical Theme - Blues and Greens */
+    --background: 210 20% 98%;
+    --foreground: 210 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 15%;
+
+    /* Primary: Medical Blue (dark blue like "Health" text) */
+    --primary: 210 80% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Medical Green (like cross and "Mate" text) */
+    --secondary: 142 70% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted backgrounds */
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 15% 45%;
+
+    /* Accent: Light medical green */
+    --accent: 142 40% 92%;
+    --accent-foreground: 142 70% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 94%;
+    --ring: 210 80% 25%;
+
+    /* Medical gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 80% 25%), hsl(142 70% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 20% 98%), hsl(142 40% 96%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 20% 97%));
+
+    /* Shadows with medical blue accent */
+    --shadow-soft: 0 4px 20px hsl(210 80% 25% / 0.08);
+    --shadow-medium: 0 8px 30px hsl(210 80% 25% / 0.12);
+    --shadow-strong: 0 12px 40px hsl(210 80% 25% / 0.16);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme for HealthMate */
+    --background: 210 20% 8%;
+    --foreground: 210 20% 92%;
+
+    --card: 210 20% 12%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 210 20% 12%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 142 70% 55%;
+    --primary-foreground: 210 20% 8%;
+
+    --secondary: 210 80% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 15%;
+    --muted-foreground: 210 15% 60%;
+
+    --accent: 142 40% 20%;
+    --accent-foreground: 142 70% 75%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 20%;
+    --input: 210 20% 15%;
+    --ring: 142 70% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Smooth scrolling for better UX */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom utilities for HealthMate */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+}
