@@ -33,7 +33,7 @@ const SymptomChecker = () => {
     setError(null);
     (async () => {
       try {
-        const res = await fetch("http://localhost:5000/predict", {
+        const res = await fetch("https://wasifabbas-medicine-recommendation-system.hf.space/predict",{
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ symptoms })
